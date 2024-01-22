@@ -1,62 +1,57 @@
-/* Resetting some default styles */
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Box sizing */
-* {
-  box-sizing: border-box;
-}
-
-/* Global styles */
 body {
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Section styles */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .section {
-  position: relative;
-  margin-bottom: 20px;
-  border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 1px solid black;
 }
 
-/* Section title region styles */
-.section-title {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #ffcc00; /* Set your preferred color */
-  padding: 5px 10px;
-  border-bottom: 1px solid black;
+.title {
+    position: absolute;
+    top: 50;
+    right: 50;
+    background-color: #FFD700; /* Yellow */
+    padding: 5px;
+    color: black;
 }
 
-/* Desktop view (992px and above) */
-@media (min-width: 992px) {
-  .section {
-    width: 33.33%; /* Equal width for each section */
-    float: left;
-  }
+/* Desktop View */
+@media only screen and (min-width: 992px) {
+    .section {
+        width: 30%;
+    }
 }
 
-/* Tablet view (between 768px and 991px, inclusive) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .section {
-    width: 50%; /* Equal width for the first two sections */
-    float: left;
-  }
+/* Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+    }
 
-  .section:nth-child(3) {
-    width: 100%; /* Full width for the third section */
-    clear: both;
-  }
-}
 
-/* Mobile view (equal to or less than 767px) */
-@media (max-width: 767px) {
-  .section {
-    width: 100%; /* Full width for each section */
-    float: none;
-  }
+
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
 }
 
